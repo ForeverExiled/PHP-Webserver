@@ -1,0 +1,8 @@
+<?php
+array_shift($argv);
+
+if (empty($argv)) {
+    $port = 80;
+} else {
+    $port = array_shift($argv);
+}

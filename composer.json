@@ -1,0 +1,17 @@
+{
+    "name": "foreverexiled/php_webserver",
+    "description": "A simple web server made using pure PHP",
+    "type": "project",
+    "autoload": {
+        "psr-4": {
+            "Foreverexiled\\PhpWebserver\\": "src/"
+        }
+    },
+    "authors": [
+        {
+            "name": "ForeverExiled",
+            "email": "foreverexiled23@gmail.com"
+        }
+    ],
+    "require": {}
+}
