@@ -58,6 +58,11 @@ class Response
 
     protected $status = 200;
     protected $body = '';
+    public function body()
+    {
+        return $this->body;
+    }
+
     protected $headers = [];
 
     public function __construct($body, $status = null) {
@@ -75,6 +80,11 @@ class Response
     public function __toString()
     {
         return $this->buildHeaderString().$this->body;
+    }
+
+    public static function error($status)
+    {
+        return new static("<h1>PHPServer: ".$status." - ".static::$statusCodes[$status]."</h1>", $status);
     }
 
     public function header($key, $value)

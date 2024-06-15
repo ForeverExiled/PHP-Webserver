@@ -1,5 +1,5 @@
 <?php
-use Foreverexiled\PhpWebserver\Server;
+use Foreverexiled\PhpWebserver\Server; 
 use Foreverexiled\PhpWebserver\Request;
 use Foreverexiled\PhpWebserver\Response;
 
@@ -16,5 +16,7 @@ require 'vendor/autoload.php';
 $server = new Server('127.0.0.1', $port);
 
 $server->listen(function (Request $request) {
-    return new Response('Hello');
+    echo $request->method().' '.$request->uri()."\n";
+
+    return new Response('<pre>'.print_r($request, true).'</pre>');
 });

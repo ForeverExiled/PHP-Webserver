@@ -1,5 +1,4 @@
 <?php namespace Foreverexiled\PhpWebserver;
-      use Exception;
 
 class Server
 {
