@@ -13,7 +13,7 @@ if (empty($argv)) {
 
 require 'vendor/autoload.php';
 
-$server = new Server('127.0.0.1', $port)
+$server = new Server('127.0.0.1', $port);
 
 $server->listen(function (Request $request) {
     return new Response('Hello');
